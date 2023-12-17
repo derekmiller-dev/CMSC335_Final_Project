@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CMCS335 - Final Project</title>
+        <style>
+
+            h1 {
+                font-size: 24px;
+                font-family: 'Arial', sans-serif;
+                text-align: center;
+            }
+
+            body {
+                background-color: lightblue;
+            }
+
+            form {
+                margin: auto;
+                width: 50%;
+                border: 3px solid green;
+                padding: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>CMCS335 - Stocks</h1>
+        <h1>Let's Display some Stocks!</h1>
+        <form action="http://localhost:5000/stockDisplay" method="post">
+            Enter a Stock <input id="stockInput" type="text" name="stockInput"><br>
+            Pick a Date Range <select id="daysInput" name="daysInput"> 
+                <option value="30">30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+            </select><br><br>
+            <input id="lookupButton" type="submit" value="Lookup!" class="submitButton">
+        </form>
+        <form action="http://localhost:5000/clear" method="post">
+            <input type="submit" value="Reset Database" class="submitButton">
+        </form>
+    </body>
+</html>
